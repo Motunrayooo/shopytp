@@ -7,4 +7,9 @@ id: 'a1',
 title: 'Towel',
 color: Colors.purple,
 ),
+  Category(
+   id: 'b1',
+   title: 'Bathrobes',
+   color: Colors.orange,
+  ),
 ];
