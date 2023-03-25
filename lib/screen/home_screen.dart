@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:shopytp/screen/bathrobe_screen.dart';
 import 'package:shopytp/screen/beddings_screen.dart';
+=======
+import 'package:card_swiper/card_swiper.dart';
+import 'package:flutter/material.dart';
+import 'package:shopytp/dummy_data.dart';
+>>>>>>> origin/lego
 import 'package:shopytp/screen/towel_screen.dart';
 import 'package:shopytp/widget/category_item.dart';
 import 'package:shopytp/widget/sales_product_widget.dart';
@@ -43,7 +49,11 @@ class HomeScreen extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         fillColor: Colors.white,
+<<<<<<< HEAD
                         prefixIcon: const Icon(Icons.search),
+=======
+                        prefixIcon: Icon(Icons.search),
+>>>>>>> origin/lego
                         hintText: 'Search',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -101,6 +111,7 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
+<<<<<<< HEAD
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
               // children: dummyCategories.map((cat) {
@@ -143,6 +154,18 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
+=======
+              children: dummyCategories.map((cat) {
+                       return CategoryItem(
+                            id: cat.id,
+                           title: cat.title,
+                             image: cat.image,
+                        onpress:
+                         () => Navigator.pushNamed(context, TowelScreen.id),
+
+                           );
+                         }).toList(),
+>>>>>>> origin/lego
             ),
           ),
           // Expanded(
