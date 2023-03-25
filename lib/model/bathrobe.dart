@@ -5,6 +5,7 @@ class Bathrobe {
   final double price;
   final String description;
   final Function onpress;
+  final String size;
 
   Bathrobe({
     required this.id,
@@ -13,5 +14,6 @@ class Bathrobe {
     required this.price,
     required this.description,
     required this.onpress,
+    required this.size
   });
 }

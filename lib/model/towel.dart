@@ -5,6 +5,7 @@ class Towel {
   final double price;
   final String description;
   final Function onpress;
+  final String   size;
 
   Towel({
     required this.id,
@@ -13,5 +14,6 @@ class Towel {
     required this.price,
     required this.description,
     required this.onpress,
+    required this.size
   });
 }
