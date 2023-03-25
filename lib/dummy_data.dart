@@ -32,7 +32,7 @@ final dummyTowel = [
     title: 'plush',
     image: 'images/large1.png',
     description: 'premium quality Towels.super fluffy,very absorbent,plush,softest feel',
-    price: 12000,
+    price: 12000dy,
     onpress: () {},
   ),
   Towel(
