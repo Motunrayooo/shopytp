@@ -1,13 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:shopytp/screen/bathrobe_screen.dart';
 import 'package:shopytp/screen/beddings_screen.dart';
-
-
 import 'package:shopytp/screen/towel_screen.dart';
 import 'package:shopytp/widget/category_item.dart';
 import 'package:shopytp/widget/sales_product_widget.dart';
-
 import '../widget/sales_widget.dart';
 
 class HomeScreen extends StatelessWidget {
