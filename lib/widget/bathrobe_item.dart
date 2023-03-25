@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TowelWidget extends StatelessWidget {
+class BathRobeWidget extends StatelessWidget {
   final String title;
   final String id;
   final String description;
@@ -8,7 +8,7 @@ class TowelWidget extends StatelessWidget {
   final double price;
   final VoidCallback onpress;
 
-  TowelWidget({
+  BathRobeWidget({
     required this.title,
     required this.id,
     required this.description,

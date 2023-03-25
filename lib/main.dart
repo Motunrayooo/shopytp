@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopytp/screen/bathrobe_screen.dart';
+import 'package:shopytp/screen/beddings_screen.dart';
 import 'package:shopytp/screen/categories_screen.dart';
 import 'package:shopytp/screen/home_screen.dart';
 import 'package:shopytp/screen/towel_screen.dart';
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.id: (context) => HomeScreen(),
         TowelScreen.id: (context) => TowelScreen(),
+        BathRobeScreen.id: (context) => BathRobeScreen(),
+        BeddingScreen.id: (context) => BeddingScreen(),
       },
 
     );

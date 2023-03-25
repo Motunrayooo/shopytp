@@ -7,6 +7,9 @@ class Beddings {
   final Function onpress;
   final String size;
 
+  final String size;
+
+
   Beddings({
     required this.id,
     required this.image,
@@ -14,6 +17,6 @@ class Beddings {
     required this.price,
     required this.description,
     required this.onpress,
-    required this.size
+    required this.size,
   });
 }

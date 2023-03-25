@@ -13,25 +13,29 @@ class TowelScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('title'),
       ),
-      // body: GridView(
+      body: ListView(
+      // GridView(
+      //   shrinkWrap: true,
       //   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+      //     mainAxisExtent: 3,
       //     maxCrossAxisExtent: 2,
+      //     mainAxisSpacing: 2,
       //   ),
-     body: SingleChildScrollView(
-       scrollDirection: Axis.vertical,
-       child: Column(
-          children: dummyTowel.map((towel) {
-            return TowelWidget(
-              title: towel.title,
-              id: towel.id,
-              description: towel.description,
-              image: towel.image,
-              price: double.parse(towel.price.toString()),
-              onpress: () => Navigator.pushNamed(context, TowelScreen.id),
-            );
-          }).toList(),
-        ),
-     ),
+        // body: SingleChildScrollView(
+        //   scrollDirection: Axis.vertical,
+        //   child: Column(
+        children: dummyTowel.map((towel) {
+          return TowelWidget(
+            title: towel.title,
+            id: towel.id,
+            description: towel.description,
+            image: towel.image,
+            price: double.parse(towel.price.toString()),
+            onpress: () => Navigator.pushNamed(context, TowelScreen.id),
+          );
+        }).toList(),
+      ),
     );
+    // );
   }
 }

@@ -14,6 +14,6 @@ class Bathrobe {
     required this.price,
     required this.description,
     required this.onpress,
-    required this.size
+    required this.size,
   });
 }

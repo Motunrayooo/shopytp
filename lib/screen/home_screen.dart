@@ -1,6 +1,9 @@
-import 'package:card_swiper/card_swiper.dart';
+
 import 'package:flutter/material.dart';
-import 'package:shopytp/dummy_data.dart';
+import 'package:shopytp/screen/bathrobe_screen.dart';
+import 'package:shopytp/screen/beddings_screen.dart';
+
+
 import 'package:shopytp/screen/towel_screen.dart';
 import 'package:shopytp/widget/category_item.dart';
 import 'package:shopytp/widget/sales_product_widget.dart';
@@ -43,7 +46,8 @@ class HomeScreen extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         fillColor: Colors.white,
-                        prefixIcon: Icon(Icons.search),
+      prefixIcon: const Icon(Icons.search),
+
                         hintText: 'Search',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -101,16 +105,49 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: dummyCategories.map((cat) {
-                       return CategoryItem(
-                            id: cat.id,
-                           title: cat.title,
-                             image: cat.image,
-                        onpress:
-                         () => Navigator.pushNamed(context, TowelScreen.id),
 
-                           );
-                         }).toList(),
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+              // children: dummyCategories.map((cat) {
+              //          return CategoryItem(
+              //            id: cat.id,
+              //     title: cat.title,
+              //     image: cat.image,
+              //     onpress: () => Navigator.pushNamed(
+              //       context,
+              //       TowelScreen.id,
+              //     ),
+              //   );
+              //            }).toList(),
+              children: [
+                CategoryItem(
+                  id: 'a1',
+                  title: 'Towels',
+                  image: 'images/large3.png',
+                  onpress: () => Navigator.pushNamed(
+                    context,
+                    TowelScreen.id,
+                  ),
+                ),
+                CategoryItem(
+                  id: 'b1',
+                  title: 'Bathrobes',
+                  image: 'images/bathrobe2.png',
+                  onpress: () => Navigator.pushNamed(
+                    context,
+                    BathRobeScreen.id,
+                  ),
+                ),
+                CategoryItem(
+                  id: 'c1',
+                  title: 'Beddings',
+                  image: 'images/plain beddings2.png',
+                  onpress: () => Navigator.pushNamed(
+                    context,
+                    BeddingScreen.id,
+                  ),
+                ),
+              ],
             ),
           ),
           // Expanded(
