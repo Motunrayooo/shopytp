@@ -5,10 +5,9 @@ class Beddings {
   final double price;
   final String description;
   final Function onpress;
-<<<<<<< HEAD
+
   final String size;
-=======
->>>>>>> origin/lego
+
 
   Beddings({
     required this.id,
@@ -17,9 +16,8 @@ class Beddings {
     required this.price,
     required this.description,
     required this.onpress,
-<<<<<<< HEAD
+
     required this.size,
-=======
->>>>>>> origin/lego
+
   });
 }
