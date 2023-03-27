@@ -7,7 +7,7 @@ class Beddings {
   final Function onpress;
   final String size;
 
-  final String size;
+
 
 
   Beddings({

@@ -30,6 +30,7 @@ class BeddingScreen extends StatelessWidget {
             id: bedding.id,
             description: bedding.description,
             image: bedding.image,
+            size: bedding.size,
             price: double.parse(bedding.price.toString()),
             onpress: () => Navigator.pushNamed(context, BeddingScreen.id),
           );

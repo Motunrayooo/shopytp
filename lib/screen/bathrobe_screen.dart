@@ -31,6 +31,7 @@ class BathRobeScreen extends StatelessWidget {
             id: bathRob.id,
             description: bathRob.description,
             image: bathRob.image,
+            size: bathRob.size,
             price: double.parse(bathRob.price.toString()),
             onpress: () => Navigator.pushNamed(context, BathRobeScreen.id),
           );

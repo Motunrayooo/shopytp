@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:shopytp/screen/bathrobe_screen.dart';
 import 'package:shopytp/screen/beddings_screen.dart';
-
 
 import 'package:shopytp/screen/towel_screen.dart';
 import 'package:shopytp/widget/category_item.dart';
@@ -46,8 +44,7 @@ class HomeScreen extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         fillColor: Colors.white,
-      prefixIcon: const Icon(Icons.search),
-
+                        prefixIcon: const Icon(Icons.search),
                         hintText: 'Search',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -89,8 +86,7 @@ class HomeScreen extends StatelessWidget {
                     backgroundColor: Colors.white,
                     elevation: 0,
                   ),
-                  onPressed:
-                      () => Navigator.pushNamed(context, TowelScreen.id),
+                  onPressed: () => Navigator.pushNamed(context, TowelScreen.id),
                   child: Text(
                     textAlign: TextAlign.end,
                     'See more',
@@ -105,7 +101,6 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
               // children: dummyCategories.map((cat) {
