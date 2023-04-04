@@ -12,19 +12,12 @@ class BathRobeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('title'),
+        title: Text(
+          'BathRobes',
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
       ),
       body: ListView(
-        // GridView(
-        //   shrinkWrap: true,
-        //   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        //     mainAxisExtent: 3,
-        //     maxCrossAxisExtent: 2,
-        //     mainAxisSpacing: 2,
-        //   ),
-        // body: SingleChildScrollView(
-        //   scrollDirection: Axis.vertical,
-        //   child: Column(
         children: dummyBathRobes.map((bathRob) {
           return BathRobeWidget(
             title: bathRob.title,
@@ -32,7 +25,8 @@ class BathRobeScreen extends StatelessWidget {
             description: bathRob.description,
             image: bathRob.image,
             price: double.parse(bathRob.price.toString()),
-            onpress: () => Navigator.pushNamed(context, BathRobeScreen.id),
+            size: bathRob.size,
+            onpress: () {},
           );
         }).toList(),
       ),

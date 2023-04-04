@@ -22,13 +22,13 @@ class CategoryItem extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             height: 100,
             child: Image.asset(image),
           ),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 20,
             ),
@@ -39,10 +39,3 @@ class CategoryItem extends StatelessWidget {
   }
 }
 
-//  decoration: BoxDecoration(
-//           borderRadius: BorderRadius.circular(15),
-//           gradient: LinearGradient(
-//             colors: [color.withOpacity(0.7), color],
-//             begin: Alignment.topLeft,
-//             end: Alignment.bottomRight,
-//           ),

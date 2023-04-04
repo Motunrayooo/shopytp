@@ -16,26 +16,26 @@ class SalesProductWidget extends StatelessWidget {
               height: 100,
               child: Image.asset('images/bathrobe2.png'),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
               'bathrobe',
               style: TextStyle(color: Colors.black38),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
               'description \ndescription',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Align(
+            const Align(
               alignment: Alignment.bottomRight,
               child: Text(
                 '#5000',

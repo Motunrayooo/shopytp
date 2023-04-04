@@ -1,37 +1,37 @@
 import 'package:flutter/material.dart';
 
-class TowelDetailsScreen extends StatefulWidget {
-  static const id = 'towelDetailsScreen';
+class BathrobeDetailsScreen extends StatefulWidget {
+  static const id = 'BathrobeDetailsScreen';
 
-  const TowelDetailsScreen({Key? key}) : super(key: key);
+  const BathrobeDetailsScreen({Key? key}) : super(key: key);
 
   @override
-  State<TowelDetailsScreen> createState() => _TowelDetailsScreenState();
+  State<BathrobeDetailsScreen> createState() => _BathrobeDetailsScreenState();
 }
 
-class _TowelDetailsScreenState extends State<TowelDetailsScreen> {
-  String? towelTitle;
-  String? towelDescription;
-  double? towelPrice;
-  String? towelImage;
-  String? towelId;
-  String? towelSize;
+class _BathrobeDetailsScreenState extends State<BathrobeDetailsScreen> {
+  String? bathrobeTitle;
+  String? bathrobeDescription;
+  double? bathrobePrice;
+  String? bathrobeImage;
+  String? bathrobeId;
+  String? bathrobeSize;
 
   @override
   Widget build(BuildContext context) {
-    final routeArgs =
+    final routesArgs =
         ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
-    towelTitle = routeArgs['title'];
-    towelImage = routeArgs['image'];
-    towelDescription = routeArgs['description'];
-    towelPrice = routeArgs['price'];
-    towelId = routeArgs['id'];
-    towelSize = routeArgs['size'];
+    bathrobeTitle = routesArgs['title'];
+    bathrobeImage = routesArgs['image'];
+    bathrobeDescription = routesArgs['description'];
+    bathrobePrice = routesArgs['price'];
+    bathrobeId = routesArgs['id'];
+    bathrobeSize = routesArgs['size'];
 
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          towelTitle!,
+          bathrobeTitle!,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         actions: [
@@ -53,13 +53,18 @@ class _TowelDetailsScreenState extends State<TowelDetailsScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    towelTitle!,
-                    style: Theme.of(context).textTheme.labelLarge,
+                  Flexible(
+                    child: Text(
+                      bathrobeTitle!,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
                   ),
-                  Text(
-                    towelPrice.toString(),
-                    style: Theme.of(context).textTheme.labelSmall,
+                  Flexible(
+                    child: Text(
+                      bathrobePrice.toString(),
+                      style: Theme.of(context).textTheme.labelSmall,
+                    ),
                   ),
                 ],
               ),
@@ -80,7 +85,7 @@ class _TowelDetailsScreenState extends State<TowelDetailsScreen> {
               height: 400,
               width: double.infinity,
               child: Image.asset(
-                towelImage!,
+                bathrobeImage!,
                 fit: BoxFit.contain,
               ),
             ),
@@ -91,13 +96,12 @@ class _TowelDetailsScreenState extends State<TowelDetailsScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Description',
+                    'description',
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                   Row(
                     children: [
                       ElevatedButton(
-
                         onPressed: () {},
                         style: TextButton.styleFrom(
                           backgroundColor: Colors.blue,
@@ -121,7 +125,7 @@ class _TowelDetailsScreenState extends State<TowelDetailsScreen> {
             ),
             Container(
               child: Text(
-                towelDescription!,
+                bathrobeDescription!,
                 style: Theme.of(context)
                     .textTheme
                     .labelMedium
@@ -137,7 +141,7 @@ class _TowelDetailsScreenState extends State<TowelDetailsScreen> {
                 alignment: Alignment.bottomRight,
                 child: Container(
                   child: Text(
-                    towelSize!,
+                    bathrobeSize!,
                   ),
                 ),
               ),

@@ -5,9 +5,7 @@ class Beddings {
   final double price;
   final String description;
   final Function onpress;
-
   final String size;
-
 
   Beddings({
     required this.id,
@@ -16,8 +14,6 @@ class Beddings {
     required this.price,
     required this.description,
     required this.onpress,
-
     required this.size,
-
   });
 }
