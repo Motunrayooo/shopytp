@@ -6,7 +6,6 @@ class Beddings {
   final String description;
   final Function onpress;
   final String size;
-
   Beddings({
     required this.id,
     required this.image,

@@ -20,6 +20,7 @@ class TowelScreen extends StatelessWidget {
             id: towel.id,
             description: towel.description,
             image: towel.image,
+            size: towel.size,
             price: double.parse(towel.price.toString()),
             onpress: () {},
             size: towel.size,

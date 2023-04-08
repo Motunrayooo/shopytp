@@ -42,8 +42,7 @@ class HomeScreen extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         fillColor: Colors.white,
-      prefixIcon: const Icon(Icons.search),
-
+                        prefixIcon: const Icon(Icons.search),
                         hintText: 'Search',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -85,8 +84,7 @@ class HomeScreen extends StatelessWidget {
                     backgroundColor: Colors.white,
                     elevation: 0,
                   ),
-                  onPressed:
-                      () => Navigator.pushNamed(context, TowelScreen.id),
+                  onPressed: () => Navigator.pushNamed(context, TowelScreen.id),
                   child: Text(
                     textAlign: TextAlign.end,
                     'See more',
@@ -101,20 +99,7 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-              // children: dummyCategories.map((cat) {
-              //          return CategoryItem(
-              //            id: cat.id,
-              //     title: cat.title,
-              //     image: cat.image,
-              //     onpress: () => Navigator.pushNamed(
-              //       context,
-              //       TowelScreen.id,
-              //     ),
-              //   );
-              //            }).toList(),
               children: [
                 CategoryItem(
                   id: 'a1',
@@ -173,30 +158,4 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// Expanded(
-//             child: Row(
-//               children: [
-//                 GridView(
-//                   shrinkWrap: true,
-// scrollDirection: Axis.horizontal,
-//                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-//                     childAspectRatio: 3 / 2,
-//                     crossAxisCount: 2,
-//                     mainAxisSpacing: 10,
-//                     mainAxisExtent: 2,
-//                     crossAxisSpacing: 2.0
-//                   ),
-//                   children: [
-//                     Card(
-//                       color: Colors.blue,
-//                       child: Text('book'),
-//                     ),
-//                     Card(
-//                       child: Bool,
-//                       color: Colors.blue,
-//                     ),
-//                   ],
-//                 ),
-//               ],
-//             ),
-//           )
+
