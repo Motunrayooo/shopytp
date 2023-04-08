@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shopytp/screen/bathrobe_screen.dart';
 import 'package:shopytp/screen/beddings_screen.dart';
-
 import 'package:shopytp/screen/towel_screen.dart';
 import 'package:shopytp/widget/category_item.dart';
 import 'package:shopytp/widget/sales_product_widget.dart';
-
 import '../widget/sales_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -102,18 +100,6 @@ class HomeScreen extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-              // children: dummyCategories.map((cat) {
-              //          return CategoryItem(
-              //            id: cat.id,
-              //     title: cat.title,
-              //     image: cat.image,
-              //     onpress: () => Navigator.pushNamed(
-              //       context,
-              //       TowelScreen.id,
-              //     ),
-              //   );
-              //            }).toList(),
               children: [
                 CategoryItem(
                   id: 'a1',
@@ -172,30 +158,4 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// Expanded(
-//             child: Row(
-//               children: [
-//                 GridView(
-//                   shrinkWrap: true,
-// scrollDirection: Axis.horizontal,
-//                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-//                     childAspectRatio: 3 / 2,
-//                     crossAxisCount: 2,
-//                     mainAxisSpacing: 10,
-//                     mainAxisExtent: 2,
-//                     crossAxisSpacing: 2.0
-//                   ),
-//                   children: [
-//                     Card(
-//                       color: Colors.blue,
-//                       child: Text('book'),
-//                     ),
-//                     Card(
-//                       child: Bool,
-//                       color: Colors.blue,
-//                     ),
-//                   ],
-//                 ),
-//               ],
-//             ),
-//           )
+

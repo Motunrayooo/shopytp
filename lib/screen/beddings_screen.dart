@@ -11,19 +11,11 @@ class BeddingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('title'),
+        title:  Text('Bedding\'s',
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
       ),
       body: ListView(
-        // GridView(
-        //   shrinkWrap: true,
-        //   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        //     mainAxisExtent: 3,
-        //     maxCrossAxisExtent: 2,
-        //     mainAxisSpacing: 2,
-        //   ),
-        // body: SingleChildScrollView(
-        //   scrollDirection: Axis.vertical,
-        //   child: Column(
         children: dummyBeddings.map((bedding) {
           return BeddingWidget(
             title: bedding.title,
@@ -32,7 +24,8 @@ class BeddingScreen extends StatelessWidget {
             image: bedding.image,
             size: bedding.size,
             price: double.parse(bedding.price.toString()),
-            onpress: () => Navigator.pushNamed(context, BeddingScreen.id),
+            size: bedding.size,
+            onpress: (){},
           );
         }).toList(),
       ),

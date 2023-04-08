@@ -152,14 +152,6 @@ final dummyTowel = [
     price: 12000,
     onpress: () {},
   ),
-  // Towel(
-  //   id: 't5',
-  //   title: '',
-  //   image: 'images/XL.png',
-  //   description: '',
-  //   price: 2.0,
-  //   onpress: () {},
-  // ),
 ];
 
 final dummyBathRobes = [

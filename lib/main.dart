@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shopytp/screen/bathrobe_details_screen.dart';
 import 'package:shopytp/screen/bathrobe_screen.dart';
+import 'package:shopytp/screen/beddings_details_screen.dart';
 import 'package:shopytp/screen/beddings_screen.dart';
-import 'package:shopytp/screen/categories_screen.dart';
 import 'package:shopytp/screen/home_screen.dart';
 import 'package:shopytp/screen/towel_screen.dart';
 
@@ -30,12 +31,18 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
             fontFamily: 'Merienda',
             fontWeight: FontWeight.w600,
-            fontSize: 15.0
+            fontSize: 15.0,
           ),
           labelSmall: TextStyle(
             fontFamily: 'SpaceGrotesk',
             fontWeight: FontWeight.w900,
             fontSize: 16.0,
+          ),
+          headlineMedium: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+            fontSize: 20.0,
+            fontFamily: 'Pacifico-Regular',
           ),
         ),
       ),
@@ -43,11 +50,13 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.id: (context) => HomeScreen(),
         TowelScreen.id: (context) => TowelScreen(),
-        BathRobeScreen.id: (context) => BathRobeScreen(),
-        BeddingScreen.id: (context) => BeddingScreen(),
+        BathRobeScreen.id: (context) => const BathRobeScreen(),
+        BeddingScreen.id: (context) => const BeddingScreen(),
+        TowelDetailsScreen.id: (context) => const TowelDetailsScreen(),
+        BathrobeDetailsScreen.id: (context) => const BathrobeDetailsScreen(),
+        BeddingDetailsScreen.id: (context) => const BeddingDetailsScreen(),
       },
     );
   }
 }
 
-//TowelDetailsScreen(),

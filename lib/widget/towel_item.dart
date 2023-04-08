@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopytp/screen/towel_details_screen.dart';
 
 class TowelWidget extends StatelessWidget {
   final String title;
@@ -8,6 +9,7 @@ class TowelWidget extends StatelessWidget {
   final double price;
   final String size;
   final VoidCallback onpress;
+  final String size;
 
   TowelWidget({
     required this.title,
@@ -17,12 +19,28 @@ class TowelWidget extends StatelessWidget {
     required this.price,
     required this.size,
     required this.onpress,
+    required this.size,
   });
+
+  void selectedTowel(BuildContext ctx) {
+    Navigator.pushNamed(
+        //passing data to routes using arguments from towel item to towel Details screen
+        ctx,
+        TowelDetailsScreen.id,
+        arguments: {
+          'id': id,
+          'title': title,
+          'description': description,
+          'image': image,
+          'price': price,
+          'size': size,
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onpress,
+      onTap: () => selectedTowel(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -30,6 +48,71 @@ class TowelWidget extends StatelessWidget {
         child: Column(
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '#${price.toString()}0',
+                    style: Theme.of(context).textTheme.labelSmall,
+                    // TextStyle(
+                    //   fontWeight: FontWeight.bold,
+                    // ),
+                  ),
+                  Text(''),
+                ],
+              ),
+            ),
+            Container(
+              // height: 100,
+              child: Image.asset(
+                image,
+                height: 250,
+                width: 250,
+                fit: BoxFit.cover,
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 250,
+                    child: Text(
+                      title,
+                      overflow: TextOverflow.fade,
+                      style: Theme.of(context).textTheme.labelLarge,
+                      // TextStyle(
+                      //   fontWeight: FontWeight.bold,
+                      //   color: Colors.black,
+                      //   fontSize: 15,
+                      // ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.bottomRight,
+                    width: 110,
+                    child: Text(
+                      size,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.labelMedium,
+                      // TextStyle(
+                      //   fontWeight: FontWeight.bold,
+                      //   fontSize: 18,
+                      // ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
             Image.asset(
               image,
               height: 250,

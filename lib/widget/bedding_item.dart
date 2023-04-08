@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screen/beddings_details_screen.dart';
+
 class BeddingWidget extends StatelessWidget {
   final String title;
   final String id;
@@ -16,20 +18,90 @@ class BeddingWidget extends StatelessWidget {
     required this.image,
     required this.price,
     required this.onpress,
-    required this. size,
+    required this.size,
   });
+
+  void selectedBeddings(BuildContext ctx) {
+    Navigator.pushNamed(
+      //passing data to routes using arguments from towel item to towel screen
+        ctx,
+        BeddingDetailsScreen.id,
+        arguments: {
+          'id': id,
+          'title': title,
+          'description': description,
+          'image': image,
+          'price': price,
+          'size': size,
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onpress,
+      onTap: () => selectedBeddings(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '#${price.toString()}0',
+                    style: Theme.of(context).textTheme.labelSmall,
+                    // TextStyle(
+                    //   fontWeight: FontWeight.bold,
+                    // ),
+                  ),
+                  Text(''),
+                ],
+              ),
+            ),
+            Container(
+              // height: 100,
+              child: Image.asset(
+                image,
+                height: 250,
+                width: 250,
+                fit: BoxFit.cover,
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 250,
+                    child: Text(
+                      title,
+                      overflow: TextOverflow.fade,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.bottomRight,
+                    width: 110,
+                    child: Text(
+                      size,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
             Image.asset(
               image,
               height: 250,
